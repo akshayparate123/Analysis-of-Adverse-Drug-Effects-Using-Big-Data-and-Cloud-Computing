@@ -43,8 +43,9 @@ def json2csv(fileList):
     
 
 fileList = get_all_files()
-print(fileList)
+# print(fileList)
 new_list = json2csv(fileList)
+print(len(new_list))
 df = pd.DataFrame.from_dict(new_list)
 print(df.head())
 df.to_csv('test.csv')
