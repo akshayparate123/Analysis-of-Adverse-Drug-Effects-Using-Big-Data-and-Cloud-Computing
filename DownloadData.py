@@ -1,7 +1,9 @@
 import requests
 import json
-from bs4 import BeautifulSoup
 import os
+
+year_num = '2024'
+num_of_files = 10
 
 def generate_links(split_fileName):
     year = split_fileName[0]
@@ -41,7 +43,7 @@ counter = 0
 for idx,file in enumerate(fileNames):
     split_fileName = file.split(" ")
     year = split_fileName[0]
-    if year == "2024" and counter<=10:
+    if year == year_num and counter<=num_of_files:
         print(counter,")",year)
         counter = counter+1
         link = generate_links(split_fileName)
